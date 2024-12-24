@@ -18,12 +18,11 @@ import { AlertCreateComponent } from './components/alert-create/alert-create.com
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
-
-// Composant supplémentaire si nécessaire
 import { DoctorPatientsComponent } from './components/doctor-patients/doctor-patients.component';
-
-// Modules communs (obligatoire pour *ngFor, *ngIf, etc.)
-import { CommonModule } from '@angular/common';
+import { PatientListComponent } from './components/patient-list/patient-list.component';
+import { PatientFormComponent } from './components/patient-form/patient-form.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +33,17 @@ import { CommonModule } from '@angular/common';
     UserListComponent,
     UserFormComponent,
     UserDetailsComponent,
-    DoctorPatientsComponent, // Ajout du composant manquant
+    DoctorPatientsComponent,
+    PatientFormComponent,
+    PatientFormComponent,
+    AdminDashboardComponent,
+    NavbarComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, // Importé uniquement ici
     AppRoutingModule,
     FormsModule,
-    HttpClientModule, // Module pour les requêtes HTTP
-    CommonModule, // Important pour *ngFor et *ngIf
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-user-form',
@@ -22,7 +22,7 @@ export class UserFormComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.isEdit = true;
-      this.userService.getAllUsers().subscribe((data) => {
+      this.userService.getAllUsers().subscribe((data: any[]) => {
         this.user = data.find((u) => u.id == +id)!;
       });
     }

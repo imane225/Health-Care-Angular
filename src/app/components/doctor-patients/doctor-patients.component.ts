@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { UserService } from '../../services/user.service';
 import { PatientResponse } from '../../models/patient-response.model';
+import { UserService } from 'src/app/services/user/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-patients',

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from 'src/app/services/alert/alert.service';
 import { Alert } from 'src/app/models/alert.model';
 import { HttpClient } from '@angular/common/http';
 import { Patient } from 'src/app/models/patient.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-alert-detail',

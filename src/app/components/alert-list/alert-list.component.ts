@@ -41,8 +41,13 @@ export class AlertListComponent implements OnInit {
     this.http.get<Patient[]>('http://localhost:8091/api/patients').subscribe({
       next: (data) => {
         data.forEach((patient) => {
-          this.patientsMap.set(patient.id, `${patient.firstName} ${patient.lastName}`);
+          if (patient.id !== undefined) {
+            this.patientsMap.set(patient.id, `${patient.firstName} ${patient.lastName}`);
+          }
         });
+      },
+      error: (err) => {
+        console.error('Erreur lors du chargement des patients:', err);
       }
     });
   }
@@ -51,7 +56,6 @@ export class AlertListComponent implements OnInit {
     return this.patientsMap.get(patientId) || 'Non attribué';
   }
 
-  // Méthode pour la navigation vers la page de détail
   viewDetails(alertId: number): void {
     this.router.navigate(['/alerts', alertId]);
   }

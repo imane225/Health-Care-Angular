@@ -1,0 +1,98 @@
+/* Container for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #444;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Label Styling */
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Input and Select Styling */
+input,
+select {
+  padding: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  color: #000; /* Ensure text is black */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Styles for Input and Select */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Dropdown (select) specific styles */
+select {
+  appearance: none; /* Ensure consistent styles across browsers */
+}
+
+/* Styling the options within the dropdown */
+option {
+  background-color: #fff; /* White background for dropdown options */
+  color: #000 !important; /* Ensure black text for dropdown options */
+}
+
+/* Button Styling */
+button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #0056b3, #004085);
+  transform: translateY(-2px);
+}
+
+/* Cancel Button */
+button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
